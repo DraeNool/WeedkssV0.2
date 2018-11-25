@@ -15,7 +15,9 @@ public class activity_menu_principal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
 
-        siguiente=(Button)findViewById(R.id.btnCambioFondo);
+        siguiente=(Button)findViewById(R.id.btnCapturaTexto);
+        btnDeteccionObjetos=(Button)findViewById(R.id.btnDeteccionObjetos);
+        btnContadorPersonas=(Button)findViewById(R.id.btnContadorPersonas);
 
         siguiente.setOnClickListener(new View.OnClickListener(){
 
@@ -25,5 +27,22 @@ public class activity_menu_principal extends AppCompatActivity {
             }}
 
         );
+
+
+        btnContadorPersonas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( activity_menu_principal.this, ContadorPersonasActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnDeteccionObjetos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( activity_menu_principal.this, detectar_objeto.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -18,6 +18,7 @@ public class activity_login extends AppCompatActivity {
     String usuario="buelot98";
     String contraseña="perro123";
 
+    Button btnRegistrarUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,8 @@ public class activity_login extends AppCompatActivity {
         siguiente=(Button)findViewById(R.id.btnIngresar);
         txtusu=(EditText) findViewById(R.id.editText);
         txtcontra=(EditText)findViewById(R.id.editText2);
+        btnRegistrarUsuario = (Button)findViewById(R.id.btnRegistrarUsuario);
+
 
         siguiente.setOnClickListener(new View.OnClickListener(){
 
@@ -41,6 +44,16 @@ public class activity_login extends AppCompatActivity {
             }}
 
         );
+
+
+        btnRegistrarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( activity_login.this, RegistrarUsuarioActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
