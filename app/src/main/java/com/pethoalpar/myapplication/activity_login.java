@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class activity_login extends AppCompatActivity {
 
@@ -39,7 +40,9 @@ public class activity_login extends AppCompatActivity {
                 }else{
                     txtcontra.setText("");
                     txtusu.setText("");
+
                     txtusu.requestFocus();
+                    Toast.makeText(activity_login.this, "Usuario y/o contraseña incorrecta", Toast.LENGTH_LONG).show();
                 }
             }}
 
