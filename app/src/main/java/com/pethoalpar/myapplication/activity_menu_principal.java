@@ -9,6 +9,7 @@ package com.pethoalpar.myapplication;
 public class activity_menu_principal extends AppCompatActivity {
 
     Button siguiente;
+    Button btnDeteccionObjetos, btnContadorPersonas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

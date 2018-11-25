@@ -24,7 +24,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".activity_menu_principal"></activity>
+        <activity android:name=".activity_menu_principal" />
+        <activity
+            android:name=".ContadorPersonasActivity"
+            android:label="@string/title_activity_contador_personas"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DeteccionObjetosActivity"
+            android:label="@string/title_activity_deteccion_objetos"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".detectar_objeto" />
     </application>
 
 </manifest>
